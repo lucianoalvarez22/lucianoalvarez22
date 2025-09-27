@@ -8,7 +8,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  max-width: 900px;
+  max-width: 1200px;       /* Aumentamos el ancho máximo */
   margin: 0 auto;
   padding: 20px;
   background-color: #f5f5f5;
@@ -19,39 +19,39 @@ body {
 header {
   background-color: #2c3e50;
   color: white;
-  padding: 30px 20px;
+  padding: 40px 30px;      /* Más padding para dar espacio */
   border-radius: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 130px;
-  height: 130px;
+  width: 150px;            /* Foto más grande */
+  height: 150px;
   border-radius: 50%;
   border: 3px solid #fff;
   object-fit: cover;
 }
 
 .header-text h1 {
-  font-size: 2em;
-  margin-bottom: 5px;
+  font-size: 2.5em;        /* Título más grande */
+  margin-bottom: 8px;
 }
 
 .header-text .subtitle {
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #ecf0f1;
 }
 
 .social-links a {
   color: #ecf0f1;
-  margin-right: 15px;
+  margin-right: 20px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -62,12 +62,12 @@ header {
 
 /* Secciones */
 section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 section h2 {
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #2980b9;
   display: inline-block;
   padding-bottom: 5px;
@@ -77,15 +77,21 @@ section h2 {
 .project-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
 }
 
 .card {
   background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1 1 45%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1 1 calc(50% - 25px); /* Ocupa 50% menos gap */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* Habilidades */
@@ -94,30 +100,30 @@ section h2 {
 }
 
 .skills li, .education li {
-  padding: 5px 0;
-  font-size: 1.05em;
+  padding: 6px 0;
+  font-size: 1.1em;
 }
 
 /* Sobre mí */
 .about p {
-  font-size: 1.05em;
+  font-size: 1.1em;
   color: #555;
-  margin-top: 10px;
+  margin-top: 12px;
   background-color: #e8f0fe;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  font-size: 0.9em;
-  margin-top: 50px;
+  font-size: 0.95em;
+  margin-top: 60px;
   color: #777;
 }
 
 /* Responsivo */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .header-container {
     flex-direction: column;
     text-align: center;
@@ -128,7 +134,21 @@ footer {
   }
 
   .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-text h1 {
+    font-size: 2em;
+  }
+
+  .header-text .subtitle {
+    font-size: 1em;
+  }
+
+  .card {
+    flex: 1 1 100%;
   }
 }
