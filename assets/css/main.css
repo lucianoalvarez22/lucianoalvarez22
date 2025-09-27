@@ -2870,6 +2870,47 @@ input, select, textarea {
 					color: inherit;
 				}
 
+				/*LUCIANO PERSONAL */
+
+				#contact {
+  margin-bottom: 50px;
+}
+
+#contact h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2980b9;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info li i {
+  color: #2980b9; /* color de los íconos */
+}
+
+
+
+				/*LUCIANO PERSONAL */
+
 /* XLarge */
 
 	@media screen and (max-width: 1680px) {
