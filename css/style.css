@@ -1,18 +1,17 @@
-/* Reset básico */
+/* Reset y tipografía */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Tipografía y colores */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
   color: #333;
 }
 
@@ -21,7 +20,7 @@ header {
   background-color: #2c3e50;
   color: white;
   padding: 30px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 40px;
 }
 
@@ -29,11 +28,12 @@ header {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 3px solid #fff;
   object-fit: cover;
@@ -49,22 +49,53 @@ header {
   color: #ecf0f1;
 }
 
+.social-links a {
+  color: #ecf0f1;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
 /* Secciones */
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 section h2 {
   color: #2c3e50;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border-bottom: 2px solid #2980b9;
   display: inline-block;
-  padding-bottom: 3px;
+  padding-bottom: 5px;
 }
 
-/* Listas */
-ul {
-  list-style: disc inside;
+/* Proyectos / tarjetas */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 45%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Habilidades */
+.skills ul, .education ul {
+  list-style: none;
+}
+
+.skills li, .education li {
+  padding: 5px 0;
+  font-size: 1.05em;
 }
 
 /* Sobre mí */
@@ -72,6 +103,9 @@ ul {
   font-size: 1.05em;
   color: #555;
   margin-top: 10px;
+  background-color: #e8f0fe;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 /* Footer */
@@ -83,14 +117,18 @@ footer {
 }
 
 /* Responsivo */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .header-container {
     flex-direction: column;
     text-align: center;
   }
 
+  .project-cards {
+    flex-direction: column;
+  }
+
   .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 }
