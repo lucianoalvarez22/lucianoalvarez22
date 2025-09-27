@@ -2870,6 +2870,49 @@ input, select, textarea {
 					color: inherit;
 				}
 
+			/* Contenedor relativo para la imagen */
+.features article a.image {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px; /* opcional */
+}
+
+/* Overlay inicial (invisible) */
+.features article a.image::after {
+  content: "VIEW";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar overlay al pasar el ratón */
+.features article a.image:hover::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Zoom suave de la imagen al pasar el ratón */
+.features article a.image img {
+  transition: transform 0.3s ease;
+}
+
+.features article a.image:hover img {
+  transform: scale(1.05);
+}
+
+
 				/*LUCIANO PERSONAL */
 
 				#contact {
