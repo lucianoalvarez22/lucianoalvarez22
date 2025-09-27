@@ -2891,8 +2891,9 @@ input, select, textarea {
 }
 
 .contact-info {
-  list-style: none;
+  list-style: none; /* Quita los puntos */
   padding: 0;
+  margin: 0;
 }
 
 .contact-info li {
