@@ -2908,6 +2908,14 @@ input, select, textarea {
   color: #2980b9; /* color de los íconos */
 }
 
+.education-item {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
 
 
 				/*LUCIANO PERSONAL */
