@@ -2928,12 +2928,6 @@ input, select, textarea {
   gap: 20px;
 }
 
-#habilidades h3 {
-  display: inline-block;   /* Para que el borde solo abarque el texto */
-  border-bottom: 3px solid black;  /* Subrayado de 3px en negro */
-  padding-bottom: 5px;     /* Espacio entre el texto y la línea */
-}
-
 				/*LUCIANO PERSONAL */
 
 /* XLarge */
